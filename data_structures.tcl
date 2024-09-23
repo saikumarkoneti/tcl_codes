@@ -1,21 +1,23 @@
-#set dv_team { vamshi saikumar jagdeesh uttam jk sharan saikumari meghana navya sadguna divya sayali pooja }
+#set dv_team { vam sai jag ut jk shar sai meg nav s d sa p }
 #set dv_team [lsort -dictionary $dv_team]
 #foreach team_individual $dv_team {
 #puts "name_of_individual in team =$team_individual"
 #}
-#set team_list ""
-#puts "what is the size of team"
-#set size [gets stdin]
-#for {set it 0} { $it<$size } {incr it} {
-#	puts "enter name $it -->"
-#	set name [gets stdin]
-#	set team_list [linsert $team_list $it "$name"]
-#}
-#set team_list [lsort -dictionary $team_list]
-#puts "team names are"
-#foreach in $team_list {
-#puts "$in"
-#}
+
+# getting team_list and sorting in dictionary manner 
+set team_list "" #creation of list
+puts "what is the size of team"
+set size [gets stdin] # taking input from console for size of team
+for {set it 0} { $it<$size } {incr it} {
+	puts "enter name $it -->"
+	set name [gets stdin] #taking each name from console"
+	set team_list [linsert $team_list $it "$name"] # inserting into list using linsert command"
+}
+set team_list [lsort -dictionary $team_list] # sorting in dictionary manner
+puts "team names are"
+foreach in $team_list { #iterating through loops using foreach loop
+puts "$in"
+}
 
 
 
