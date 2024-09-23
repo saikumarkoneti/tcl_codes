@@ -1,3 +1,4 @@
+1.EXAMPLE
 # program to search a file
 set tclfiles [glob *.tcl]
 foreach filename $tclfiles {
@@ -9,8 +10,10 @@ puts "file=$filename"
 #foreach {a b c} $status {
 #puts "$c--$b--$a"
 #}
+
+2.EXAMPLE
 # program generalised to use switch and for loops
-#puts "enter a value of number"
+puts "enter a value of number"
 #set number [gets stdin]
 set number 0
 #puts "$number"
@@ -34,6 +37,7 @@ puts "\ndone"
 }
 seperate;
 
+3.EXAMPLE
 # upvar to use as pass by ref value
 proc setpositive {hi value} {
 upvar $hi local
@@ -47,9 +51,11 @@ set local $value
 setpositive x -9
 setpositive y -90
 puts "\nsign of$x and sign of $y"
-# my example for upvar
+
+4.EXAMPLE
+# my example for upvar upvar is like pass by reference in sv
 proc unsetting {var val} {
-upvar $var local
+upvar $var local #now local is referencing to var variable
 unset local
 }
 unsetting x 7
@@ -58,6 +64,8 @@ if {[info exists x]} {
 } else {
      puts "\n ledhu"
 }
+
+5.EXAMPLE
 #adding 2
 proc add2 name {
 upvar $name x
@@ -67,8 +75,7 @@ set h 6
 add2 h
 puts "\n $h"
 
-
-
+6.EXAMPLE
 #decrement proc written to function like incr reverse
 proc decr {varname {decrement 1}} {
 upvar 1 $varname var
@@ -80,10 +87,7 @@ puts "\n $number"
 decr number
 }
 
-
-
-
-
+7.EXAMPLE
 set number 10
 incr number [expr {-1}]
 puts "$number"
