@@ -1,15 +1,16 @@
-1.EXAMPLE
+#SEARCHING THE FILES WITH EXTENSION OF TCL
 # program to search a file
 set tclfiles [glob *.tcl]
 foreach filename $tclfiles {
 puts "file=$filename"
 }
-#set color {red green yellow}
-#set foods {kushka aloo biryani}
-#set status "ok ad hi"
-#foreach {a b c} $status {
-#puts "$c--$b--$a"
-#}
+1.EXAMPLE
+set color {red green yellow}
+set foods {kushka aloo biryani}
+set status "ok ad hi"
+foreach {a b c} $status {
+puts "$c--$b--$a"
+}
 
 2.EXAMPLE
 # program generalised to use switch and for loops
